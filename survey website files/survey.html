@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Ordering Experience Survey</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #283747;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid text-light py-3">
+        <h2><center>Zomato App Experience Survey</center></h2>
+        <form action="mailto:dibyabiva.kchakra@gmail.com" method="post" enctype="text/plain">
+           
+           <!-- <div class="form-group col-8">
+               <label for="inputEmail" class="form-label">Email</label>
+               <input type="email" class="form-control" id="inputEmail" name="email" placeholder="abc@gmail.com">
+            </div>-->
+            <input type="hidden" id="hiddenEmail" name="UserEmailId">
+  
+           
+            <!-- Rating Scale Question -->
+            <div class="form-group col-12">
+                <label>1. How satisfied are you with the user interface of the Zomato application?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="user_interface_rating" id="rating1_1" value="5">
+                    <label class="form-check-label" for="rating1_1">5 - Very Satisfied</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="user_interface_rating" id="rating1_2" value="4">
+                    <label class="form-check-label" for="rating1_2">4 - Satisfied</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="user_interface_rating" id="rating1_3" value="3">
+                    <label class="form-check-label" for="rating1_3">3 - Neutral</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="user_interface_rating" id="rating1_4" value="2">
+                    <label class="form-check-label" for="rating1_4">2 - Unsatisfied</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="user_interface_rating" id="rating1_5" value="1">
+                    <label class="form-check-label" for="rating1_5">1 - Very Unsatisfied</label>
+                </div>
+            </div>
+
+            <!-- Multiple Choice Question -->
+            <div class="form-group col-12">
+                <label>2. Which device do you primarily use for ordering in Zomato?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="device_used" id="device1" value="mobile">
+                    <label class="form-check-label" for="device1">Mobile Phone</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="device_used" id="device2" value="desktop">
+                    <label class="form-check-label" for="device2">Desktop Computer</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="device_used" id="device3" value="tablet">
+                    <label class="form-check-label" for="device3">Tablet</label>
+                </div>
+            </div>
+
+            
+
+            <!-- Checkboxes Question -->
+            <div class="form-group col-12">
+                <label>3. Which of the following features do you find most valuable? (Select all that apply)</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="most_valuable_features" id="feature1" value="fast">
+                    <label class="form-check-label" for="feature1">Fast Delivery</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="most_valuable_features" id="feature2" value="accurate">
+                    <label class="form-check-label" for="feature2">Accurate Order Tracking</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="most_valuable_features" id="feature3" value="variety">
+                    <label class="form-check-label" for="feature3">Wide Menu Variety</label>
+                </div>
+            </div>
+
+            <!-- Dropdown Question -->
+            <div class="form-group col-6">
+                <label for="dropdown">4. How often do you use the Zomato application?</label>
+                <select class="form-control" id="dropdown" name="use_of_online_ordering_service">
+                    <option value="daily">Daily</option>
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="rarely">Rarely</option>
+                </select>
+            </div>
+
+            <!-- Likert Scale Question -->
+            <div class="form-group col-12">
+                <label>5. Please rate the speed of the checkout process:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="checkout_speed" id="likert1" value="5">
+                    <label class="form-check-label" for="likert1">5 - Very Fast</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="checkout_speed" id="likert2" value="4">
+                    <label class="form-check-label" for="likert2">4 - Fast</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="checkout_speed" id="likert3" value="3">
+                    <label class="form-check-label" for="likert3">3 - Neutral</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="checkout_speed" id="likert4" value="2">
+                    <label class="form-check-label" for="likert4">2 - Slow</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="checkout_speed" id="likert5" value="1">
+                    <label class="form-check-label" for="likert5">1 - Very Slow</label>
+                </div>
+            </div>
+
+            <!-- Matrix Question -->
+            <div class="form-group col-12" >
+                <label>6. Please rate the following aspects of your experience:</label>
+                <table class="table text-light">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Excellent</th>
+                            <th>Good</th>
+                            <th>Fair</th>
+                            <th>Poor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Website Design</td>
+                            <td><input type="radio" name="Website_Design" value="excellent"></td>
+                            <td><input type="radio" name="Website_Design" value="good"></td>
+                            <td><input type="radio" name="Website_Design" value="fair"></td>
+                            <td><input type="radio" name="Website_Design" value="poor"></td>
+                        </tr>
+                        <tr>
+                            <td>Order Accuracy</td>
+                            <td><input type="radio" name="Order_Accuracy" value="excellent"></td>
+                            <td><input type="radio" name="Order_Accuracy" value="good"></td>
+                            <td><input type="radio" name="Order_Accuracy" value="fair"></td>
+                            <td><input type="radio" name="Order_Accuracy" value="poor"></td>
+                        </tr>
+                        <tr>
+                            <td>Customer Support</td>
+                            <td><input type="radio" name="Customer_Support" value="excellent"></td>
+                            <td><input type="radio" name="Customer_Support" value="good"></td>
+                            <td><input type="radio" name="Customer_Support" value="fair"></td>
+                            <td><input type="radio" name="Customer_Support" value="poor"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Semantic Differential Scale Question -->
+            <div class="form-group col-12">
+                <label>7. How would you describe the overall quality of the food you received?</label>
+                <div class="form-row">
+                    <div class="col-md-2">
+                        <p>Low Quality</p>
+                        <img src="images/thumbsdown.jpeg" width="30" alt="Sad Face">
+                    </div>
+                    <div class="col-md-8">
+                        <input type="range" class="form-control-range" id="qualityRange" name="qualityrange" min="1" max="7" step="1">
+                    </div>
+                    <div class="col-md-2">
+                        <p>High Quality</p>
+                        <img src="images/thumbsup.png" width="30" alt="Sad Face">
+                    </div>
+                </div>
+            </div>
+
+          
+            <!-- Semantic Differential Scale Question with Images -->
+            <div class="form-group col-12">
+                <label>8. How would you rate the packaging of the delivered items?</label>
+                <div class="row">
+                    <div class="col-md-2">
+                        <p>Very Poor</p>
+                        <img src="images/sad.jpeg" width="30" alt="Sad Face">
+                    </div>
+                    <div class="col-md-8">
+                        <input type="range" class="form-control-range" id="packagingRange" name="packagingRange" min="1" max="5" step="1">
+                    </div>
+                    <div class="col-md-2">
+                        <p>Excellent</p>
+                        <img src="images/happy.jpeg" width="30" alt="Happy Face">
+                    </div>
+                </div>
+            </div>
+           
+
+            <!-- Ranking Question -->
+            <div class="form-group col-12">
+                <label>9. Please rank the following factors in order of importance when using Zomato application:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Convenience_ranking" id="ranking1" value="convenience">
+                    <label class="form-check-label" for="ranking1">Convenience</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Price_ranking" id="ranking2" value="price">
+                    <label class="form-check-label" for="ranking2">Price</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="Quality_of_food_ranking" id="ranking3" value="quality">
+                    <label class="form-check-label" for="ranking3">Quality of Food</label>
+                </div>
+            </div>
+            <!-- Text Entry Question -->
+            <div class="form-group col-5">
+                <label for="feedback">10. Please provide any additional feedback or suggestions:</label>
+                 <textarea class="form-control" id="feedback" name="feedback" rows="3"></textarea>
+            </div>
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+   
+    <script>
+        // Retrieve the email from session storage
+        const userEmail = sessionStorage.getItem('userEmail');
+        
+        // If email is found, populate the hidden input field with it
+        if (userEmail) {
+            const hiddenEmailInput = document.getElementById('hiddenEmail');
+            if (hiddenEmailInput) {
+                hiddenEmailInput.value = userEmail;
+            }
+        }
+    </script>
+      
+
+    <!-- Bootstrap JS scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
